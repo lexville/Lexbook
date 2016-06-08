@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace Lexbook\Exceptions;
 
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Lexbook\Events;
 
 abstract class Event
 {

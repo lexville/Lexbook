@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Lexbook\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
