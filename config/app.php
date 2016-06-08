@@ -144,6 +144,7 @@ return [
         Lexbook\Providers\AuthServiceProvider::class,
         Lexbook\Providers\EventServiceProvider::class,
         Lexbook\Providers\RouteServiceProvider::class,
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
 
     ],
 
@@ -159,7 +160,7 @@ return [
     */
 
     'aliases' => [
-
+        'Alert'     => UxWeb\SweetAlert\SweetAlert::class,
         'App'       => Illuminate\Support\Facades\App::class,
         'Artisan'   => Illuminate\Support\Facades\Artisan::class,
         'Auth'      => Illuminate\Support\Facades\Auth::class,
