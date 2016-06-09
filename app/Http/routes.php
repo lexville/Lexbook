@@ -15,3 +15,12 @@ Route::get('/', [
     'uses' => 'HomeController@index',
     'as'   => 'home'
 ]);
+
+Route::get('/signup', [
+    'uses'  => 'AuthController@getSignUp',
+    'as'    => 'signup'
+]);
+
+Route::post('/signup', [
+    'uses'  => 'AuthController@postSignUp',
+]);

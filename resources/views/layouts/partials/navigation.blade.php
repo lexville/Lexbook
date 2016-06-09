@@ -40,7 +40,7 @@
             </ul>
           </li>
         <!-- @else -->
-            <li><a href="#">Register</a></li>
+            <li><a href="{{ route('signup') }}">Register</a></li>
             <li><a href="#">Login</a></li>
         <!-- @endif -->
       </ul>

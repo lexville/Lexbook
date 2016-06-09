@@ -11,7 +11,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        alert()->message('Robots are working!');
         return view('home');
     }
 }
