@@ -16,11 +16,23 @@ Route::get('/', [
     'as'   => 'home'
 ]);
 
-Route::get('/signup', [
+Route::get('/auth/register', [
     'uses'  => 'AuthController@getSignUp',
     'as'    => 'signup'
 ]);
 
-Route::post('/signup', [
+Route::post('/auth/register', [
     'uses'  => 'AuthController@postSignUp',
+]);
+
+/**
+* Authentication routes
+*/
+Route::get('/auth/login', [
+   'uses'       => 'AuthController@getLogin',
+   'as'         => 'login',
+   'middleware' => ['guest']
+]);
+Route::post('/auth/login', [
+   'uses' => 'AuthController@postLogin'
 ]);
