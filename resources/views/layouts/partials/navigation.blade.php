@@ -36,7 +36,7 @@
             <ul class="dropdown-menu">
               <li><a href="#">My Profile</a></li>
               <li><a href="#">Update Profile</a></li>
-              <li><a href="#">Logout</a></li>
+              <li><a href="{{ route('logout') }}">Logout</a></li>
             </ul>
           </li>
         <!-- @else -->

@@ -33,6 +33,12 @@ Route::get('/auth/login', [
    'as'         => 'login',
    'middleware' => ['guest']
 ]);
+
 Route::post('/auth/login', [
    'uses' => 'AuthController@postLogin'
+]);
+
+Route::get('/logout', [
+    'uses' => 'AuthController@getLogout',
+    'as'   => 'logout'
 ]);

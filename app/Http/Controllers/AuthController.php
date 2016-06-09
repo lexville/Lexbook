@@ -69,4 +69,18 @@ class AuthController extends Controller
         // If auth is successfull redirect back to the homepage
         return redirect()->route('home');
     }
+
+    /**
+     * To log out users
+     * @return logout view
+     */
+    public function getLogout()
+    {
+        // Log out the user
+        Auth::logout();
+        // Provide a sweet alert telling the user he/she is now logged out
+        alert()->success('Your are now logged out', 'Bye');
+        // Redirect to login page
+        return redirect()->route('login');
+    }
 }
