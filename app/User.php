@@ -43,4 +43,30 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    public function getName()
+    {
+        if ($this->first_name && $this->last_name) {
+            return "{$this->first_name} {$this->last_name}";
+        }
+        if ($this->first_name) {
+            return $this->first_name;
+        }
+
+        if ($this->last_name) {
+            return $this->last_name;
+        }
+        return null;
+    }
+    // get name or username
+    public function getNameOrUsername()
+    {
+        return $this->getName() ?: $this->username;
+    }
+
+    // To get a gravatar
+    public function getAvatarUrl()
+    {
+        return "https://www.gravatar.com/avatar/{{ md5($this->email) }}?s=80";
+    }
 }

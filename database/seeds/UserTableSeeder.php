@@ -14,19 +14,25 @@ class UserTableSeeder extends Seeder
         DB::table('users')->truncate();
         DB::table('users')->insert([
             [
-                'username'  => 'Alex',
-                'email' => 'lex@user.com',
-                'password' => bcrypt('secret')
+                "username"  => "Buddy",
+                "first_name" => "New",
+                "last_name"  => "Buddy",
+                "email" => "Buddy@user.com",
+                "password" => bcrypt("secret")
             ],
             [
-                'username'  => 'Alexandra',
-                'email' => 'lexi@luser.com',
-                'password' => bcrypt('secret')
+                "username"  => "User",
+                "first_name" => "Bobby",
+                "last_name"  => "Cameo",
+                "email" => "user@luser.com",
+                "password" => bcrypt("secret")
             ],
             [
-                'username'  => 'Lex',
-                'email' => 'lex@user.com',
-                'password' => bcrypt('secret')
+                "username"  => "Lex",
+                "first_name" => "See",
+                "last_name"  => "Me",
+                "email" => "lex@user.com",
+                "password" => bcrypt("secret")
             ],
         ]);
     }

@@ -26,8 +26,8 @@ Route::post('/auth/register', [
 ]);
 
 /**
-* Authentication routes
-*/
+ * Authentication routes
+ */
 Route::get('/auth/login', [
    'uses'       => 'AuthController@getLogin',
    'as'         => 'login',
@@ -41,4 +41,12 @@ Route::post('/auth/login', [
 Route::get('/logout', [
     'uses' => 'AuthController@getLogout',
     'as'   => 'logout'
+]);
+
+/**
+ * Search Route
+ */
+Route::get('/search', [
+    'uses' => 'SearchController@getSearchResults',
+    'as'   => 'search'
 ]);
