@@ -23,7 +23,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Find a friend" name="query">
                     <div class="input-group-btn">
-                        <button class="btn btn-default btn-search" type="submit"><i class="glyphicon glyphicon-search"></i> Search</button>
+                        <button class="btn btn-raised btn-info" type="submit">Search</button>
                     </div>
                 </div>
               </form>
