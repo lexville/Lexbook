@@ -16,6 +16,10 @@ Route::get('/', [
     'as'   => 'home'
 ]);
 
+/**
+ * Authentication routes
+ */
+
 Route::get('/auth/register', [
     'uses'  => 'AuthController@getSignUp',
     'as'    => 'signup'
@@ -25,9 +29,6 @@ Route::post('/auth/register', [
     'uses'  => 'AuthController@postSignUp',
 ]);
 
-/**
- * Authentication routes
- */
 Route::get('/auth/login', [
    'uses'       => 'AuthController@getLogin',
    'as'         => 'login',
@@ -49,4 +50,12 @@ Route::get('/logout', [
 Route::get('/search', [
     'uses' => 'SearchController@getSearchResults',
     'as'   => 'search'
+]);
+
+/**
+ * User Profile Route
+ */
+Route::get('/user/{username}', [
+    'uses' => 'ProfileController@getProfile',
+    'as'   => 'profile'
 ]);
